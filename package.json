@@ -1,0 +1,45 @@
+{
+  "name": "angular2-workshop",
+  "version": "1.0.0",
+  "description": "code for the angular2 workshop",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "angular2": "2.0.0-beta.0",
+    "bootstrap": "3.3.6",
+    "es6-shim": "0.33.13",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.0",
+    "zone.js": "0.5.10"
+  },
+  "devDependencies": {
+    "css-loader": "0.23.1",
+    "expose-loader": "0.7.1",
+    "file-loader": "0.8.5",
+    "style-loader": "0.13.0",
+    "ts-loader": "0.7.2",
+    "typescript": "1.7.5",
+    "url-loader": "0.5.7",
+    "webpack": "1.12.9",
+    "webpack-dev-server": "1.14.0"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirkaufman/angular2-workshop.git"
+  },
+  "keywords": [
+    "angular2",
+    "angular",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Nir Kaufman <nirkaufman.com> (nirkaufman.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nirkaufman/angular2-workshop/issues"
+  },
+  "homepage": "https://github.com/nirkaufman/angular2-workshop#readme"
+}
