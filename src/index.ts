@@ -6,16 +6,9 @@ import { bootstrap } from 'angular2/platform/browser';
 
 @Component({
   selector: 'App',
-  template: '<h1>{{ title }}</h1>'
+  template: '<h1>Welcome to the Angular2 Workshop!</h1>'
 })
 
-class App {
-
-  public title:string;
-
-  constructor() {
-    this.title = "Welcome to the Angular2 Workshop!"
-  }
-}
+class App {}
 
 bootstrap(App);
