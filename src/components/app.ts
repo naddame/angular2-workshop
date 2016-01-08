@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-import {TopNavBar} from './top-navbar';
+import {TopNavBar} from './top-navbar/top-navbar';
 import {Content}   from './content';
 
 @Component({

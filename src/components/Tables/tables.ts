@@ -1,5 +1,5 @@
 import {Component} from "angular2/core";
-import {TableView} from './table-view';
+import {TableView} from './table-view/table-view';
 
 @Component({
   selector: 'tables',
