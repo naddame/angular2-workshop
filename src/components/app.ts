@@ -5,7 +5,10 @@ import {Content}   from './content';
 @Component({
   selector: 'app',
   directives: [Content, TopNavBar],
-  template: ``
+  template: `
+    <top-navbar></top-navbar>
+    <content></content>
+    `
 })
 
 export class App {}
