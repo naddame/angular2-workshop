@@ -1,11 +1,8 @@
 import {Component} from 'angular2/core';
-import {TopNavBar} from './top-navbar';
-import {Content}   from './content';
 
 @Component({
   selector: 'app',
-  directives: [Content, TopNavBar],
-  template: ``
+  template: `<div>App Component</div>`
 })
 
 export class App {}
