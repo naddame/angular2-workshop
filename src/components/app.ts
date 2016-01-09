@@ -8,7 +8,7 @@ import {OrderHistory}              from './order-history/order-history';
 @RouteConfig([
   {path: '/',       name: 'root',         redirectTo: ['Tables']},
   {path:'/tables',  name: 'Tables',       component: Tables},
-  {path:'/order:id',name: 'OrderView',    component: OrderView},
+  {path:'/order/:id',name: 'OrderView',   component: OrderView},
   {path:'/history', name: 'OrderHistory', component: OrderHistory}
 ])
 
