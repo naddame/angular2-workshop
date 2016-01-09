@@ -1,8 +1,8 @@
 import 'assets/css/app.css';
 import 'expose?Zone!zone.js';
 import 'reflect-metadata';
-import {App}         from 'components/app';
-import { bootstrap } from 'angular2/platform/browser';
+import {App}              from 'components/app';
+import {ROUTER_PROVIDERS} from 'angular2/router';
+import { bootstrap }      from 'angular2/platform/browser';
 
-
-bootstrap(App);
+bootstrap(App, [ROUTER_PROVIDERS]);
