@@ -4,18 +4,22 @@ import {Injectable} from "angular2/core";
 @Injectable()
 export class Restaurant {
 
-    private _orders: Order[];
+  private _orders:Order[];
 
-    newOrder(order:Order){
-      let _order = new Order(5);
-      this._orders.push(_order);
-    }
+  constructor() {
+    this._orders = [];
+  }
 
-    removeOrder(order:Order){
-      this._orders.splice(this._orders.indexOf(order), 1);
-    }
+  newOrder(order:Order) {
+    let _order = new Order(5);
+    this._orders.push(_order);
+  }
 
-    checkout(orderId){
-      this._orders.find( order => order.id === orderId ).checkout()
-    }
+  removeOrder(order:Order) {
+    this._orders.splice(this._orders.indexOf(order), 1);
+  }
+
+  checkout(orderId) {
+    this._orders.find(order => order.id === orderId).checkout()
+  }
 }

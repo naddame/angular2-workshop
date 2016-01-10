@@ -1,5 +1,7 @@
 import {Component}         from'angular2/core';
 import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {Restaurant}        from 'services/restaurant';
+import {Order}             from "services/order";
 
 @Component({
   selector: 'top-navbar',
@@ -7,4 +9,15 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
   templateUrl: 'components/top-navbar/top-navbar.html'
 })
 
-export class TopNavBar {}
+export class TopNavBar {
+
+  constructor(private rest:Restaurant) {
+
+  }
+
+  newTable(){
+    this.rest.newOrder(new Order());
+    debugger;
+  }
+
+}
