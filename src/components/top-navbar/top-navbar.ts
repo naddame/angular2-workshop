@@ -11,13 +11,9 @@ import {Order}             from "services/order";
 
 export class TopNavBar {
 
-  constructor(private rest:Restaurant) {
-
-  }
+  constructor(private rest:Restaurant) {}
 
   newTable(){
-    this.rest.newOrder(new Order());
-    debugger;
+    this.rest.newOrder();
   }
-
 }

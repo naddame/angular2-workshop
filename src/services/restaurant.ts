@@ -10,8 +10,8 @@ export class Restaurant {
     this._orders = [];
   }
 
-  newOrder(order:Order) {
-    let _order = new Order(5);
+  newOrder() {
+    let _order = new Order(1);
     this._orders.push(_order);
   }
 
