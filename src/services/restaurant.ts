@@ -16,5 +16,4 @@ class Restaurant {
     checkout(orderId){
       this._orders.find( order => order.id === orderId ).checkout()
     }
-
 }
