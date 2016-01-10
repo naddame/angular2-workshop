@@ -1,6 +1,8 @@
-import {Order} from "./order";
+import {Order}      from "./order";
+import {Injectable} from "angular2/core";
 
-class Restaurant {
+@Injectable()
+export class Restaurant {
 
     private _orders: Order[];
 

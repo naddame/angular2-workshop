@@ -4,6 +4,7 @@ import {TopNavBar}                 from './top-navbar/top-navbar';
 import {Tables}                    from './tables/tables';
 import {OrderView}                 from './order-view/order-view';
 import {OrderHistory}              from './order-history/order-history';
+import {Restaurant}                from 'services/restaurant';
 
 @RouteConfig([
   {path: '/',         name: 'root',         redirectTo: ['Tables']},
@@ -14,7 +15,8 @@ import {OrderHistory}              from './order-history/order-history';
 
 @Component({
   selector: 'app',
-  directives: [TopNavBar, Tables, OrderView, OrderHistory, RouterOutlet],
+  directives: [TopNavBar, RouterOutlet],
+  providers:[Restaurant],
   template: `
     <top-navbar></top-navbar>
 
