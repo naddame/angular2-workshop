@@ -5,23 +5,30 @@ import {Router}     from "angular2/router";
 @Injectable()
 export class Restaurant {
 
-  private _orders:Order[];
+  private _orders;
 
-  constructor(private router:Router) {
-    this._orders = [];
+  public constructor(private router:Router) {
+    this._orders = mockOrders;
   }
 
-  newOrder() {
+  public get orders(){
+    return this._orders;
+  }
+
+  public newOrder() {
     let _order = new Order(1);
     this._orders.push(_order);
     this.router.navigate( ['OrderView', { id: _order.id }] );
   }
 
-  getOrderById(orderId) {
+  public getOrderById(orderId) {
     return this._orders.filter( order => order.id === orderId);
   }
 
-  checkout(orderId){
+  public checkout(orderId){
     this._orders.find(order => order.id === orderId).checkout()
   }
 }
+
+// mock data
+const mockOrders = [new Order(), new Order(), new Order()];

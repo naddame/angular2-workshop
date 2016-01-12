@@ -2,55 +2,55 @@ import {Item} from './item'
 
 export class Order {
 
-  private _orderId:string;
-  private _created:Date;
-  private _diners:number;
-  private _items:Item[];
-  private _comments:string;
-  private _total:number;
-  private _paid:boolean;
-  private _closed:Date;
+  private orderId: string;
+  public created: Date;
+  public diners: number;
+  public items: Item[];
+  private comments: string;
+  private total: number;
+  private paid: boolean;
+  private closed: Date;
 
-  constructor(diners:number = 1) {
-    this._orderId = Order.nextId();
-    this._created = new Date();
-    this._diners  = diners;
-    this._paid    = false;
-    this._total   = 0;
+  public constructor(diners: number = 1) {
+    this.orderId = Order.nextId();
+    this.created = new Date();
+    this.diners  = diners;
+    this.paid    = false;
+    this.total   = 0;
   }
 
-  get id() {
-    return this._orderId;
+  public get id() {
+    return this.orderId;
   }
 
-  setComments(comments) {
-    this._comments = comments;
+  public setComments(comments) {
+    this.comments = comments;
   }
 
-  addItem(item:Item) {
-    this._items.push(item);
+  public addItem(item: Item) {
+    this.items.push(item);
   }
 
-  removeItem(item:Item) {
-    this._items.splice(this._items.indexOf(item), 1);
+  public removeItem(item:Item) {
+    this.items.splice(this.items.indexOf(item), 1);
   }
 
-  addToTotal(item:Item) {
-    this._total = 0;
-    this._items.forEach(item => this._total += item.price);
+  public addToTotal(item:Item) {
+    this.total = 0;
+    this.items.forEach(item => this.total += item.price);
   }
 
-  checkout() {
-    this._closed = new Date();
-    this._paid   = true;
+  public checkout() {
+    this.closed = new Date();
+    this.paid   = true;
   }
 
-  static nextId():string {
+  private static nextId():string {
     function s4() {
       return Math.floor((1 + Math.random()) * 0x10000)
           .toString(16)
           .substring(1);
     }
-    return `${s4()}${s4()}-${s4()}-${s4()}-${s4()}-${s4()}${s4()}${s4()}`;
+    return `${s4()}`;
   }
 }
