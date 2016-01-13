@@ -22,7 +22,7 @@ export class Restaurant {
   }
 
   public getOrderById(orderId) {
-    return this._orders.filter( order => order.id === orderId);
+    return this._orders.filter( order => order.id === orderId)[0];
   }
 
   public checkout(orderId){
@@ -30,5 +30,5 @@ export class Restaurant {
   }
 }
 
-// mock data
+// mock data (remove when comping from server)
 const mockOrders = [new Order(), new Order(), new Order()];

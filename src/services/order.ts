@@ -8,7 +8,7 @@ export class Order {
   public items: Item[];
   private comments: string;
   private total: number;
-  private paid: boolean;
+  public paid: boolean;
   private closed: Date;
 
   public constructor(diners: number = 1) {

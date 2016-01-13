@@ -22,6 +22,6 @@ export class OrderView {
 
   ngOnInit() {
     let orderId = this.routeParams.get('id');
-    this.order  = this.rest.getOrderById(orderId)
+    this.order  = this.rest.getOrderById(orderId);
   }
 }

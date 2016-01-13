@@ -1,5 +1,6 @@
 import {Component} from "angular2/core";
 import {Router}    from "angular2/router";
+import {ddescribe} from "angular2/testing";
 
 @Component({
   selector: 'table-view',
@@ -13,9 +14,5 @@ export class TableView {
 
   public editOrder(orderId){
     this.router.navigate( ['OrderView', { id: orderId }] );
-  }
-
-  public checkout(order){
-    order.paid = true;
   }
 }
