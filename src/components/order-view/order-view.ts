@@ -4,8 +4,8 @@ import {ItemList}     from './item-list/item-list';
 import {ItemComments} from './item-comments/item-comments';
 import {ItemButtons}  from './item-buttons/item-buttons';
 import {RouteParams}  from "angular2/router";
-import {Restaurant}   from "../../services/restaurant";
-import {Order}        from "../../services/order";
+import {Restaurant}   from "services/restaurant";
+import {Order}        from "services/order";
 
 @Component({
   selector: 'order-view',

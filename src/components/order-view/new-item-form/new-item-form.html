@@ -1,19 +1,17 @@
 <!-- NEW ITEM FORM -->
-<form class="form-inline">
+<form class="form-inline"
+      #orderForm="ngForm"
+      (ngSubmit)="selectItem(orderForm.value)">
 
   <div class="form-group">
-    <label for="item">Add Item:</label>
-    <select id="item" class="form-control">
-      <option>Coffee</option>
-      <option>Cake</option>
-      <option>Salad</option>
-      <option>Drink</option>
-      <option>Desert</option>
+    <label>Add Item:</label>
+    <select class="form-control" ngControl="item">
+      <option *ngFor="#item of items" [value]="item.itemId">{{item.label}}</option>
     </select>
   </div>
 
   <div class="form-group">
-    <button class="btn btn-success form-control">add</button>
+    <button type="submit" class="btn btn-success form-control">add</button>
   </div>
 
 </form>

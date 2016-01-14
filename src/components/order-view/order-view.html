@@ -4,16 +4,16 @@
     <div class="panel panel-default history-log">
 
       <div class="panel-heading clearfix">
-        <h2>Table #2</h2>
+        <h2>Table #{{order.orderId}}</h2>
         <ul class="list-inline">
           <li>
-            <span><span class="glyphicon glyphicon-time"></span>&nbsp;12:00</span>
+            <span><span class="glyphicon glyphicon-time"></span>&nbsp;{{order.created | date:'shortTime'}}</span>
           </li>
 
           <li>
               <span>
                 <span class="glyphicon glyphicon-cutlery"></span>
-                <span>&nbsp;5</span>
+                <span>&nbsp;{{order.diners}}</span>
                 <!--<input type="number" class="dining-count" />-->
               </span>
           </li>
@@ -25,7 +25,7 @@
       <!--=========================================-->
       <!-- CONTENT GOES HERE -->
 
-      <new-item-form></new-item-form>
+      <new-item-form [order]="order"></new-item-form>
       <item-list></item-list>
       <item-comments></item-comments>
       <item-buttons [order]="order"></item-buttons>

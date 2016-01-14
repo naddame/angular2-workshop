@@ -17,6 +17,7 @@ export class Order {
     this.diners  = diners;
     this.paid    = false;
     this.total   = 0;
+    this.items   = [];
   }
 
   public get id() {

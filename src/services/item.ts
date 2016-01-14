@@ -1,18 +1,13 @@
 export class Item {
 
-  private price:number;
-  private label:string;
+  public itemId: string;
+  public price  : number;
+  public label  : string;
 
   constructor(label:string, price:number) {
-    this.label = label;
-    this.price = price;
+    this.itemId = (Math.ceil(Math.random() * new Date().getMilliseconds())).toString();
+    this.label  = label;
+    this.price  = price;
   }
 
-  public get price(){
-    return this.price;
-  }
-
-  public get label(){
-    return this.label;
-  }
 }
