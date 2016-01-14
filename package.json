@@ -25,7 +25,8 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot",
+    "api": "json-server --watch db/orders.json"
   },
   "repository": {
     "type": "git",
