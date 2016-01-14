@@ -6,7 +6,7 @@ export class Order {
   public created: Date;
   public diners: number;
   public items: Item[];
-  private comments: string;
+  public comments: string;
   private total: number;
   public paid: boolean;
   private closed: Date;
