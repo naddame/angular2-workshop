@@ -38,6 +38,8 @@ module.exports = {
     inline: true,
     port: 3030,
     historyApiFallback: true
-  }
+  },
+
+  devtool: '#inline-source-map'
 
 };
