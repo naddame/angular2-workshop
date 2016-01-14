@@ -9,5 +9,4 @@ export class Item {
     this.label  = label;
     this.price  = price;
   }
-
 }
